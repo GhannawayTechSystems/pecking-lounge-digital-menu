@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f47b20">
+  <meta name="description" content="Pecking Lounge digital menu - Nakuru, Kenya">
+  <title>Pecking Lounge | Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="brand-mark">PL</div>
+    <p class="eyebrow">NAKURU • KENYA</p>
+
+    <p class="hero-subtitle">Good food. Great moments. Always</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="welcome">
+    <p class="section-kicker">OUR MENU</p>
+    <h2>Choose your favourite</h2>
+    <p>Explore our food and drinks, search for anything you are craving, and tap an item to see it up close.</p>
+  </section>
+
+  <section class="menu-tools">
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Search food, drinks, tags, categories..." autocomplete="off">
+      <button id="clearSearch" aria-label="Clear search">×</button>
+    </div>
+    <div id="mainGroups" class="main-groups"></div>
+    <div id="subgroups" class="subgroups"></div>
+  </section>
+
+  <div id="status" class="status">Loading menu...</div>
+  <section id="menuGrid" class="menu-grid"></section>
+
+  <div id="emptyState" class="empty-state hidden">
+    <div class="empty-icon">🍽️</div>
+    <h3>No menu items found</h3>
+    <p>Try another search or choose a different category.</p>
+    <button id="resetFilters" class="orange-button">Show All</button>
+  </div>
+
+</main>
+
+<section class="location-section">
+  <div class="location-card">
+
+    <div class="location-info">
+      <p class="section-kicker">VISIT US</p>
+
+      <h2>Find Pecking Lounge</h2>
+
+      <p class="location-address">
+        📍 Nakuru, Kenya
+      </p>
+
+      <a
+        id="mapLink"
+        class="map-button"
+        href="#"
+        target="_blank"
+        rel="noopener">
+        📍 Get Directions
+      </a>
+    </div>
+
+    <div class="map-preview">
+      <iframe
+        id="mapFrame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8214467985363!2d36.120743499999996!3d-0.290875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18299360d0080cfd%3A0x67871cf3a1503e62!2sPecking%20lounge!5e1!3m2!1sen!2ske!4v1791378397524!5m2!1sen!2ske"
+        title="Pecking Lounge Location"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Pecking <span>Lounge</span></div>
+  <p>Nakuru, Kenya</p>
+  <p class="copyright">© <span id="year"></span> Pecking Lounge. All rights reserved.</p>
+</footer>
+
+<!-- Image / item preview -->
+<div id="previewModal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <div class="modal-image-wrap">
+      <img id="modalImage" src="" alt="">
+      <div id="modalNoImage" class="modal-no-image">🍽️</div>
+    </div>
+    <div class="modal-details">
+      <span id="modalTag" class="tag hidden"></span>
+      <p id="modalGroup" class="modal-group"></p>
+      <h2 id="modalItem"></h2>
+      <div id="modalPrice" class="modal-price"></div>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</div>
+<button id="backToTop" title="Back to Top">
+    ↑
+</button>
+<script src="script.js"></script>
+</body>
+</html>
